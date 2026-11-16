@@ -1,0 +1,969 @@
+@media (max-width: 900px) {
+
+    body.menu-open{
+        overflow: hidden;
+    }
+
+    .topnav {
+        justify-content: space-between;
+        padding: 0 20px;
+        position: relative;
+        z-index: 100;
+    }
+
+    .menu-toggle {
+        display: flex !important;
+    }
+
+   .linknav {
+    overflow-y: auto;
+    scrollbar-width: none;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--primary-color);
+    
+    z-index: 20;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+}
+.menu-close {
+    display: block;
+    margin: 20px 20px 30px auto;
+    background:none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    transition: .4s;
+}
+.menu-close:hover{
+width: 30px;
+ background: var(--main-color) ;
+    height: 37px;
+    border-radius: 4px;
+}
+
+.linknav.active {
+    transform: translateX(0);
+     transition-delay: .7s;
+}
+.linknav > ul > li:hover > a,
+.linknav > ul > li > a {
+    color: white;
+    transform: translate(0);
+}
+
+.linknav .dropdown a {
+    color: var(--opacity-color);
+}
+.linknav li {
+    padding: 40px 0 0 50px;
+}
+
+.linknav .dropdown > div.active > .dropdown.two {
+    display: flex;
+}
+    .linknav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+.linknav li {
+    width: 100%;
+}
+.linknav .dropdown {
+    position: static;
+    visibility: visible;
+    opacity: 1;
+    display: none;
+}
+.linknav .dropdown.two {
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+    background: transparent;
+    box-shadow: none;
+    min-width: 0;
+    width: 100%;
+}
+.linknav .dropdown > div.active > a {
+    color: white;
+}
+.linknav .dropdown a:hover{color: white;}
+.linknav .dropdown a {
+    padding: 10px 25px;
+    font-size: 16px;
+   
+}
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    z-index: 15;
+   
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+     transition-delay: .4s;
+}
+.linknav li.active > .dropdown {
+    display: flex;
+    background-color: transparent;
+}
+
+
+    /* Hero Section */
+  
+
+    /* Hero Section - Tablet */
+
+.downnav {
+    padding: 40px 5%;
+    min-height: auto;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.datanav {
+    width: 48%;
+    max-width: 520px;
+    flex: 1 1 48%;
+    min-width: 0;
+}
+
+.datanav h1 {
+    font-size: 45px;
+    text-wrap: nowrap;
+}
+
+.datanav p {
+    font-size: 17px;
+}
+
+.imgbox {
+    width: 58%;
+   
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    overflow: visible;
+}
+
+.imgbox img {
+    width: 150%;
+    height: auto;
+    /* transform: none; */
+}
+
+.imgbox::before {
+    width: 92%;
+    height: auto;
+    aspect-ratio: 1;
+     left: 50%;
+    top: 50%;
+    transform: translate(-40%, -50%); 
+}
+
+.imgbox::after {
+    width: 82%;
+    height: auto;
+    aspect-ratio: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-40%, -50%);
+}
+
+.product-details {
+    gap: 25px;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+}
+.datanav h1{
+    font-size: 48px;
+}
+
+.product-details h3 {
+    font-size: 18px;
+}
+
+.size-options {
+    gap: 7px;
+}
+
+.size-options span {
+    padding: 6px 10px;
+    font-size: 16px;
+}
+
+.buttons-box {
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.buttons-box button {
+    padding: 12px 17px;
+    font-size: 17px;
+}
+
+.cart-sidebar {
+    width: 300px;
+}
+
+
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+       
+        width: 100%;
+    }
+
+    .card-img img {
+        height: 290px;
+    }
+
+    .card-data h3 {
+        font-size: 20px;
+    }
+
+    .card-data p {
+        font-size: 17px;
+    }
+
+
+
+    .stylish-casual .img-card img {
+    width: 100%;
+    margin-left: 0;
+}
+
+.stylish-casual .sec-data {
+    left: 7%;
+    width: 45%;
+    gap: 10px;
+}
+
+.stylish-casual .sec-data h2 {
+    font-size: 30px;
+}
+
+.stylish-casual .sec-data b {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.stylish-casual .sec-data a {
+    font-size: 15px;
+}
+
+
+.banners {
+        gap: 15px;
+        margin: 70px auto;
+    }
+
+    .banner-data h2 {
+        font-size: 28px;
+    }
+
+    .banner-data h4 {
+        font-size: 19px;
+    }
+
+    .banner-data p {
+        font-size: 14px;
+    }
+
+    .banner-data a {
+        padding: 10px 19px;
+        font-size: 15px;
+    }
+
+    .lookbook .banner-data {
+   
+    right: 3% !important;
+    transform: translateY(-30px);
+}
+ .lookbook .banner-data a{
+     padding: 10px 20px;
+      font-size: 15px ;
+ }
+
+
+.Latest-News .cards{
+     width: 94%;
+}
+.Latest-News .card-img{
+    width: 95%;
+}
+.fashion{
+    padding: 8px 10px;
+    font-size: 12px;
+}
+.Latest-News .card-data h3{
+    font-size: 23px;
+}
+.Latest-News .card-data span{
+font-size: 15px;
+}
+.Latest-News .card-data p {
+    font-size: 15px;
+}
+
+
+.top-footer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+}
+
+.top-footer b {
+    font-size: 23px;
+}
+ }
+
+
+
+
+
+
+
+   @media (max-width: 668px) {
+
+    body.menu-open{
+        overflow: hidden;
+    }
+
+    .topnav {
+        justify-content: space-between;
+        padding: 0 20px;
+        position: relative;
+        z-index: 100;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+   .linknav {
+    overflow-y: auto;
+    scrollbar-width: none;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--primary-color);
+    
+    z-index: 20;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+}
+.menu-close {
+    display: block;
+    margin: 20px 20px 30px auto;
+    background:none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    transition: .4s;
+}
+.menu-close:hover{
+width: 30px;
+ background: var(--main-color) ;
+    height: 37px;
+    border-radius: 4px;
+}
+
+.linknav.active {
+    transform: translateX(0);
+     transition-delay: .7s;
+}
+.linknav > ul > li:hover > a,
+.linknav > ul > li > a {
+    color: white;
+    transform: translate(0);
+}
+
+.linknav .dropdown a {
+    color: var(--opacity-color);
+}
+.linknav li {
+    padding: 40px 0 0 50px;
+}
+
+.linknav .dropdown > div.active > .dropdown.two {
+    display: flex;
+}
+    .linknav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+.linknav li {
+    width: 100%;
+}
+.linknav .dropdown {
+    position: static;
+    visibility: visible;
+    opacity: 1;
+    display: none;
+}
+.linknav .dropdown.two {
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+    background: transparent;
+    box-shadow: none;
+    min-width: 0;
+    width: 100%;
+}
+.linknav .dropdown > div.active > a {
+    color: white;
+}
+.linknav .dropdown a:hover{color: white;}
+.linknav .dropdown a {
+    padding: 10px 25px;
+    font-size: 16px;
+   
+}
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    z-index: 15;
+   
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+     transition-delay: .4s;
+}
+.linknav li.active > .dropdown {
+    display: flex;
+    background-color: transparent;
+}
+
+
+
+.logo{
+    width: 100px;
+aspect-ratio: 1;
+
+}
+.icons i {
+    width: 39px !important;
+    aspect-ratio: 1;
+ font-size: 14px;
+
+  padding: 5px !important;
+}
+
+
+
+
+    /* Hero Section */
+  
+
+    
+.downnav {
+    padding: 40px 5%;
+    min-height: auto;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.datanav {
+    
+    max-width: 520px;
+    flex: 1 1 48%;
+    min-width: 0;
+}
+
+.datanav h1 {
+    font-size: 45px;
+    text-wrap: nowrap;
+}
+
+.datanav p {
+    font-size: 17px;
+}
+
+.imgbox {
+    width: 60%;
+   
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    overflow: visible;
+}
+
+.imgbox img {
+    width: 170% ;
+    height: auto;
+    /* transform: none; */
+}
+
+.imgbox::before {
+    width: 92%;
+    height: auto;
+    aspect-ratio: 1;
+     left: 50%;
+    top: 50%;
+    transform: translate(-40%, -50%); 
+}
+
+.imgbox::after {
+    width: 82%;
+    height: auto;
+    aspect-ratio: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-40%, -50%);
+}
+
+.product-details {
+    gap: 23px;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+}
+.datanav h1{
+    font-size: 45px;
+}
+
+.product-details h3 {
+    font-size: 16px;
+}
+
+.size-options {
+    gap: 7px;
+}
+
+.size-options span {
+    padding: 4px 9px;
+    font-size: 14px;
+}
+
+.buttons-box {
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.buttons-box button {
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+
+.cart-sidebar {
+    width: 280px;
+}
+
+.cart-header h2{
+    font-family: var(--heading-f-semibold);
+    font-size: 22px;
+}
+
+.cart-footer h3{
+
+font-size: 15px;
+}
+
+
+
+  /* Product Cards - Mobile */
+
+  section .sec-data p{
+     font-size: 13px;
+  }
+ section .sec-data h2{
+    font-size: 30px;
+ }
+
+.Popular-Products ul li a{
+    font-size: 13px;
+}
+.Popular-Products ul{
+    gap: 5px;
+}
+
+
+.cards {
+    width: 100%;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+}
+
+.card-img {
+    width: 100%;
+}
+
+.card-img img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1.1;
+    object-fit: contain;
+}
+
+
+
+.card-overlay .icons {
+    bottom: 60px;
+    gap: 7px;
+}
+
+.card-overlay .icons i {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+}
+
+.heart-icon {
+    top: 10px;
+    left: 15px;
+}
+
+.btn {
+    bottom: 10px;
+    padding: 10px 12px;
+}
+
+.card-overlay a {
+    font-size: 13px;
+}
+
+.card-data {
+    padding: 12px 3px;
+}
+
+.card-data h3 {
+    font-size: 17px;
+}
+
+.card-data p {
+    font-size: 15px;
+}
+
+.card-data del {
+    font-size: 13px;
+    margin-right: 3px;
+}
+
+
+
+
+    /* Stylish Casual */
+
+.stylish-casual {
+        margin: 30px auto;
+    }
+    .stylish-casual .img-card img {
+    width: 115%;
+}
+
+    .stylish-casual .sec-data {
+        left: 14%;
+        width: 50%;
+        gap: 9px;
+    }
+
+    .stylish-casual .sec-data h2 {
+        font-size: 21px;
+    }
+
+    .stylish-casual .sec-data b {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .stylish-casual .sec-data a {
+        font-size: 13px;
+    }
+
+
+
+    
+
+
+.banners {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .banner-data h2 {
+        font-size: 35px;
+    }
+
+    .banner-data h4 {
+        font-size: 22px;
+    }
+
+    .banner-data p {
+        font-size: 16px;
+    }
+
+.lookbook .banner-data a{
+     padding: 10px 22px;
+     font-size: 15px ;
+}
+
+
+
+.Latest-News .cards{
+     width: 93%;
+     grid-template-columns: repeat(2,1fr);
+}
+.Latest-News .card-img{
+    width: 94%;
+}
+.fashion{
+    padding: 8px 10px;
+    font-size: 12px;
+}
+.Latest-News .card-data h3{
+    font-size: 22px;
+}
+.Latest-News .card-data span{
+font-size: 15px;
+}
+.Latest-News .card-data p {
+    font-size: 14px;
+}
+
+
+.top-footer {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px 20px;
+}
+
+.top-footer b {
+    font-size: 20px;
+}
+
+
+
+
+.menu-toggle {
+     width: 35px;
+    height: 27px;
+} 
+    
+
+}
+
+
+   @media (max-width: 450px) {
+     /* Product Cards - Mobile */
+.cart div:nth-of-type(2) {
+    font-size: 13px;
+}
+.cart div:first-of-type{
+    font-size: 14px;
+}
+
+.cart-footer  button{
+    font-size: 14px;
+}
+
+.cart-header h2{
+    font-size: 20px;
+}
+
+.cart-footer h3{
+
+font-size: 15px;
+}
+
+
+.cart-sidebar {
+    width: 253px;
+}
+
+.countdown-box{
+    padding: 10px;
+}
+.countdown-banner{
+    width: 100%;
+   
+}
+.countdown-box b{
+    font-size: 15px;
+}
+
+
+.countdown-content h2{
+    font-size: 25px;}
+
+  section .sec-data p{
+     font-size: 11px;
+  }
+ section .sec-data h2{
+    font-size: 27px;
+ }
+
+.Popular-Products ul li a{
+    font-size: 12px;
+}
+.Popular-Products ul{
+    gap: 5px;
+}
+
+
+.cards {
+    width: 100%;
+    grid-template-columns: repeat(1,1fr) !important;
+    gap: 15px;
+}
+
+.card-img {
+    width: 100%;
+}
+
+.card-img img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+
+
+
+.card-overlay .icons {
+    bottom: 60px;
+    gap: 7px;
+}
+
+.card-overlay .icons i {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+}
+
+.heart-icon {
+    top: 10px;
+    left: 45px;
+}
+
+.btn {
+    bottom: 10px;
+    padding: 12px 14px;
+}
+
+.card-overlay a {
+    font-size: 13px;
+}
+
+.card-data {
+    padding: 11px 3px;
+}
+
+.card-data h3 {
+    font-size: 16px;
+}
+
+.card-data p {
+    font-size: 14px;
+}
+
+.card-data del {
+    font-size: 12px;
+    margin-right: 3px;
+}
+
+
+
+
+    /* Stylish Casual */
+
+.stylish-casual {
+        margin: 30px auto;
+    }
+    .stylish-casual .img-card img {
+    width: 115%;
+}
+
+    .stylish-casual .sec-data {
+        left: 14%;
+        width: 50%;
+        gap: 9px;
+    }
+
+    .stylish-casual .sec-data h2 {
+        font-size: 21px;
+    }
+
+    .stylish-casual .sec-data b {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .stylish-casual .sec-data a {
+        font-size: 13px;
+    }
+
+
+
+    
+
+
+.banners {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .banner-data h2 {
+        font-size: 35px;
+    }
+
+    .banner-data h4 {
+        font-size: 22px;
+    }
+
+    .banner-data p {
+        font-size: 16px;
+    }
+
+.lookbook .banner-data a{
+     padding: 10px 22px;
+     font-size: 15px ;
+}
+
+
+
+.Latest-News .cards{
+     width: 93%;
+     grid-template-columns: repeat(1,1fr);
+}
+.Latest-News .card-img{
+    width: 94%;
+}
+.fashion{
+    padding: 6px 9px;
+    font-size: 10px;
+}
+.Latest-News .card-data h3{
+    font-size: 20px;
+}
+.Latest-News .card-data span{
+font-size: 14px;
+}
+.Latest-News .card-data p {
+    font-size: 12px;
+}
+}
